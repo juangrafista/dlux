@@ -76,8 +76,10 @@ const StyledRecent = styled.div`
 
   @media (max-width: 800px) {
     padding: 1rem 5%;
+  }
+  @media (max-width: 400px) {
     .cards {
-      background-color: lightblue;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
   }
 `

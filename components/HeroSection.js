@@ -70,6 +70,7 @@ const Hero = styled.div`
     cursor: pointer;
   }
   @media (max-width: 800px) {
+    padding: 0 5%;
     h1 {
       font-size: 2rem;
     }

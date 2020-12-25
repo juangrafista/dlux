@@ -33,6 +33,12 @@ const StyledTestimonies = styled.div`
     justify-content: space-between;
     grid-gap: 1rem;
   }
+  @media (max-width: 400px) {
+    padding: 3rem 10%;
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
 `
 
 export default Testimonies

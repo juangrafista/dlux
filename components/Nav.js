@@ -62,6 +62,7 @@ const StyledNav = styled.nav`
   @media (max-width: 800px) {
     justify-content: center;
     align-items: center;
+    margin: 0 5%;
     .logo {
       display: flex;
       justify-content: center;
