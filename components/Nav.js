@@ -9,7 +9,9 @@ const Nav = () => {
       <StyledNav>
         <div className='logo'>
           <Link href='/'>
-            <a>dLux</a>
+            <a>
+              <img src='/dlux-logo.jpg' alt='dlux-logo' />
+            </a>
           </Link>
         </div>
         <div className='links'>
@@ -43,9 +45,9 @@ const StyledNav = styled.nav`
   margin: 0 10%;
   .logo {
     flex: 1 1 20rem;
-    width: 50%;
-    font-weight: bolder;
-    font-size: 1.5rem;
+    img {
+      height: 5vh;
+    }
   }
   .links {
     flex: 1 1 20rem;
@@ -56,6 +58,18 @@ const StyledNav = styled.nav`
   }
   a {
     font-weight: lighter;
+  }
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+    .logo {
+      display: flex;
+      justify-content: center;
+      img {
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 `
 const WhiteLine = styled.div`
