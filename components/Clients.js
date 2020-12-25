@@ -32,6 +32,7 @@ const Logos = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   img {
     max-height: 6rem;
     max-width: 8rem;

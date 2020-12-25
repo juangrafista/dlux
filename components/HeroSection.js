@@ -68,11 +68,17 @@ const Hero = styled.div`
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     cursor: pointer;
-
-    /* border: 2px solid;
-    border-image-slice: 1;
-    background-clip: border-box;
-    border-image-source: linear-gradient(90deg, #ff7a00 0%, #cc00ff 100%); */
+  }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 1.2rem;
+    }
   }
 `
 

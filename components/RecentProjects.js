@@ -73,6 +73,13 @@ const StyledRecent = styled.div`
     grid-gap: 1.5rem;
     cursor: pointer;
   }
+
+  @media (max-width: 800px) {
+    padding: 1rem 5%;
+    .cards {
+      background-color: lightblue;
+    }
+  }
 `
 
 export default RecentProjects
