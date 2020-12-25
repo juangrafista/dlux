@@ -1,7 +1,30 @@
-import '../styles/globals.css'
+import { createGlobalStyle } from 'styled-components'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: black;
+    color: white;
+    width: 100wh;
+    font-family: 'Montserrat', sans-serif;  
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+`
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyle />
+
+      <Component {...pageProps} />
+    </>
+  )
 }
-
-export default MyApp
