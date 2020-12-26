@@ -54,7 +54,13 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 50%;
+    a {
+      opacity: 50%;
+      &:hover {
+        opacity: 100%;
+        color: #ff7300;
+      }
+    }
   }
   a {
     font-weight: lighter;
@@ -62,7 +68,7 @@ const StyledNav = styled.nav`
   @media (max-width: 800px) {
     justify-content: center;
     align-items: center;
-    margin: 0 5%;
+    margin: 0.5rem 5%;
     .logo {
       display: flex;
       justify-content: center;
