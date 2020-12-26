@@ -63,11 +63,15 @@ const Hero = styled.div`
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
-    background: linear-gradient(90deg, #ff7a00 0%, #cc00ff 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(90deg, #ff7a00 0%, #cc00ff 100%);
     border: none;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     cursor: pointer;
+    &:hover {
+      background: linear-gradient(90deg, #ff7a00 0%, #cc00ff 100%);
+    }
   }
   @media (max-width: 800px) {
     padding: 0 5%;

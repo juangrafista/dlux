@@ -25,6 +25,8 @@ const StyledTestimony = styled.div`
   img {
     width: 10rem;
     height: 10rem;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 20% 0% 20% 0%;
   }
   .text {
