@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <StyledFooter>
         <div className='first'>
-          <section>
+          <section className='title'>
             <h2>
               Especialistas en Projection Mapping.
               <br />
@@ -46,10 +46,16 @@ const StyledFooter = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
+    .title {
+      flex: 4 1 30rem;
+    }
     .sitemap {
+      flex: 1 1 20rem;
       margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      /* background-color: lightblue; */
       a {
-        padding-left: 2rem;
         opacity: 50%;
         &:hover {
           opacity: 100%;
