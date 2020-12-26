@@ -45,6 +45,9 @@ const StyledTestimony = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
+    img {
+      padding-bottom: 1rem;
+    }
   }
 `
 

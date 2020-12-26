@@ -32,9 +32,13 @@ const StyledTestimonies = styled.div`
     align-items: center;
     justify-content: space-between;
     grid-gap: 1rem;
+    row-gap: 2rem;
+  }
+  @media (max-width: 800px) {
+    padding: 3rem 5%;
   }
   @media (max-width: 400px) {
-    padding: 3rem 10%;
+    padding: 3rem 5%;
     .cards {
       grid-template-columns: 1fr;
     }

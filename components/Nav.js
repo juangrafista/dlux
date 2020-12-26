@@ -59,7 +59,7 @@ const StyledNav = styled.nav`
   a {
     font-weight: lighter;
   }
-  @media (max-width: 710px) {
+  @media (max-width: 800px) {
     justify-content: center;
     align-items: center;
     margin: 0 5%;
