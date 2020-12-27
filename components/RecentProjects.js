@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import RecentCard from './RecentCard'
 
-const RecentProjects = () => {
+const RecentProjects = ({ allPosts }) => {
   return (
     <StyledRecent>
       <h2>
@@ -26,7 +26,7 @@ const RecentProjects = () => {
             <path
               d='M8.84327 5.14711L15.5933 9.04423C16.5933 9.62158 16.5933 11.065 15.5933 11.6423L8.84327 15.5394C7.84327 16.1168 6.59327 15.3951 6.59327 14.2404L6.59327 6.44616C6.59327 5.29145 7.84327 4.56976 8.84327 5.14711Z'
               stroke='white'
-              stroke-width='2'
+              strokeWidth='2'
             />
           </svg>
         </span>

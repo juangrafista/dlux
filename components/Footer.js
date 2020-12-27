@@ -17,7 +17,10 @@ const Footer = () => {
           </section>
           <section className='sitemap'>
             <Link href='/'>
-              <a>Projectos</a>
+              <a>Home</a>
+            </Link>
+            <Link href='/projects'>
+              <a>Proyectos</a>
             </Link>
             <Link href='/'>
               <a>About Us</a>
