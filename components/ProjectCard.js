@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import { urlFor } from '../lib/sanity'
+import Link from 'next/link'
 
 const ProjectCard = ({ post }) => {
   return (
-    <StyledCard>
-      <img
-        src={urlFor(post.mainImage).width(400).format('webp').url()}
-        alt={post.title}
-      />
-      <div className='text'>
-        <h3>{post.title}</h3>
-        <p>{post.excerpt}</p>
-      </div>
-    </StyledCard>
+    <Link href={`/proyects/${post.slug}`}>
+      <a>
+        <StyledCard>
+          <img
+            src={urlFor(post.mainImage).width(400).format('webp').url()}
+            alt={post.title}
+          />
+          <div className='text'>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+          </div>
+        </StyledCard>
+      </a>
+    </Link>
   )
 }
 
