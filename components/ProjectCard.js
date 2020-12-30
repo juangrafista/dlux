@@ -2,16 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import { urlFor } from '../lib/sanity'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const ProjectCard = ({ post }) => {
   return (
     <Link href={`/proyects/${post.slug}`}>
       <a>
         <StyledCard>
-          <img
-            src={urlFor(post.mainImage).width(400).format('webp').url()}
-            alt={post.title}
-          />
+          <div className='img-container'>
+            <Image
+              src={urlFor(post.mainImage).width(400).format('webp').url()}
+              alt={post.title}
+              layout='fill'
+              objectFit='cover'
+            />
+          </div>
           <div className='text'>
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>
@@ -46,10 +51,12 @@ const StyledCard = styled.div`
       padding-bottom: 1rem;
     }
   }
-  img {
+  .img-container {
+    overflow: hidden;
     width: 100%;
     height: 15rem;
     object-fit: cover;
+    position: relative;
   }
   @media (max-width: 800px) {
     .text {

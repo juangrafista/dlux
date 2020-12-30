@@ -1,7 +1,7 @@
 import Head from 'next/head'
 // components
 import Layout from '../components/Layout'
-import HeroSection from '../components/HeroSection'
+import HeroSection2 from '../components/HeroSection2'
 import RecentProjects from '../components/RecentProjects'
 import Clients from '../components/Clients'
 import Testimonies from '../components/Testimonies'
@@ -17,7 +17,7 @@ export default function Home({ posts, preview }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <HeroSection />
+        <HeroSection2 />
         <RecentProjects post={recentPosts} />
         <Clients />
         <Testimonies />

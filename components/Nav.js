@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const Nav = () => {
   return (
@@ -10,7 +11,13 @@ const Nav = () => {
         <div className='logo'>
           <Link href='/'>
             <a>
-              <img src='/dlux-logo.jpg' alt='dlux-logo' />
+              <Image
+                src='/dlux-logo.jpg'
+                alt='dlux-logo'
+                width={138}
+                height={77}
+                priority
+              />
             </a>
           </Link>
         </div>
