@@ -16,6 +16,7 @@ const Nav = () => {
                 alt='dlux-logo'
                 width={138}
                 height={77}
+                quality={50}
                 priority
               />
             </a>
