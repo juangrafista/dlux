@@ -11,7 +11,7 @@ const HeroSection2 = () => {
           alt='bg-image'
           layout='fill'
           objectFit='cover'
-          priority='true'
+          priority
         />
         <div className='text'>
           <h1>
@@ -102,15 +102,15 @@ const Hero = styled.div`
   @media (max-width: 800px) {
     .text {
       padding: 0 5%;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1rem;
-    }
-    button {
-      font-size: 1.2rem;
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      button {
+        font-size: 1.2rem;
+      }
     }
   }
 `
