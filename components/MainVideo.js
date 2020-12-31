@@ -24,7 +24,7 @@ const StyledVideo = styled.div`
   .player-wrapper {
     position: relative;
     padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   .react-player {
     position: absolute;
