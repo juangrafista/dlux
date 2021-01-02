@@ -13,7 +13,8 @@ const MainVideo = ({ video }) => {
           height='100%'
           muted={true}
           playing={true}
-          controls={false}
+          loop={true}
+          controls={true}
         />
       </div>
     </StyledVideo>
@@ -23,8 +24,11 @@ const MainVideo = ({ video }) => {
 const StyledVideo = styled.div`
   .player-wrapper {
     position: relative;
-    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-    margin-bottom: 3rem;
+    padding-top: 45%;
+
+    @media (max-width: 800px) {
+      padding-top: 60%;
+    }
   }
   .react-player {
     position: absolute;

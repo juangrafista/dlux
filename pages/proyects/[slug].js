@@ -1,18 +1,15 @@
 import Layout from '../../components/Layout'
-import { urlFor } from '../../lib/sanity'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import styled from 'styled-components'
-import Image from 'next/image'
 import PostContent from '../../components/PostContent'
-import ReactPlayer from 'react-player'
 import MainVideo from '../../components/MainVideo'
+import Creditos from '../../components/Creditos'
 
 const PostDetail = ({ post }) => {
   return (
     <Layout>
       {post.mainVideo && <MainVideo video={post.mainVideo} />}
-
       <PostContent content={post.body} />
+      {post.creditos && <Creditos creditos={post.creditos} />}
     </Layout>
   )
 }
