@@ -4,22 +4,23 @@ import Masonry from 'react-masonry-css'
 import { urlFor } from '../lib/sanity'
 
 const ImageGallery = ({ gallery }) => {
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 3,
+    700: 2,
+    400: 2,
+  }
+
   return (
     <StyledGallery>
-      <h1>Image Gallery</h1>
       <Masonry
-        breakpointCols={3}
+        breakpointCols={breakpointColumnsObj}
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'
       >
         {gallery.map((el, i) => (
           <div className='img-container'>
-            <img
-              src={urlFor(el.url).width(400).format('webp').url()}
-              key={i}
-              layout='fill'
-              objectFit='cover'
-            />
+            <img src={urlFor(el).width(400).format('webp').url()} key={i} />
           </div>
         ))}
       </Masonry>
@@ -28,7 +29,7 @@ const ImageGallery = ({ gallery }) => {
 }
 
 const StyledGallery = styled.div`
-  background: lightpink;
+  background-color: #e0e0e0;
   padding: 1rem 10%;
   .my-masonry-grid {
     display: -webkit-box; /* Not needed if autoprefixing */
