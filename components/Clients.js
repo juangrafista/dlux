@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const Clients = () => {
   return (
@@ -7,13 +8,43 @@ const Clients = () => {
       <h2>Clientes</h2>
       <p>Algunos de nuestros clientes en más de cinco países</p>
       <Logos>
-        <img src='/logos/tve_blue.png' alt='logo' />
-        <img src='/logos/teatro-real.svg' alt='logo' />
+        <Image
+          src='/logos/tve_blue.png'
+          alt='logo'
+          width={100}
+          height={77}
+          quality={50}
+        />
+        <Image
+          src='/logos/teatro-real.svg'
+          alt='logo'
+          width={100}
+          height={77}
+        />
         <div className='opera'>
-          <img src='/logos/opera-paris.png' alt='logo' id='opera' />
+          <Image
+            src='/logos/opera-paris.png'
+            alt='logo'
+            id='opera'
+            width={140}
+            height={77}
+            quality={50}
+          />
         </div>
-        <img src='/logos/tve_blue.png' alt='logo' />
-        <img src='/logos/tve_blue.png' alt='logo' />
+        <Image
+          src='/logos/tve_blue.png'
+          alt='logo'
+          width={100}
+          height={77}
+          quality={50}
+        />
+        <Image
+          src='/logos/tve_blue.png'
+          alt='logo'
+          width={100}
+          height={77}
+          quality={50}
+        />
       </Logos>
     </StyledClients>
   )

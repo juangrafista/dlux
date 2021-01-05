@@ -6,10 +6,9 @@ import RecentProjects from '../components/RecentProjects'
 import Clients from '../components/Clients'
 import Testimonies from '../components/Testimonies'
 // sanity
-import { getAllPosts, getAllPostsForHome } from '../lib/api'
+import { getRecentPosts } from '../lib/api'
 
-export default function Home({ posts, preview }) {
-  const recentPosts = posts.slice(2)
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -18,7 +17,7 @@ export default function Home({ posts, preview }) {
       </Head>
       <Layout>
         <HeroSection2 />
-        <RecentProjects post={recentPosts} />
+        <RecentProjects recentPosts={posts} />
         <Clients />
         <Testimonies />
       </Layout>
@@ -27,7 +26,7 @@ export default function Home({ posts, preview }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts()
+  const posts = await getRecentPosts()
   return {
     props: {
       posts,
