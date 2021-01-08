@@ -59,7 +59,7 @@ const Hero = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-bottom: 4rem;
+    padding-bottom: 10rem;
     h1 {
       font-size: 4rem;
       line-height: 100%;
@@ -79,7 +79,7 @@ const Hero = styled.div`
       opacity: 0.8;
       padding-top: 2rem;
       padding-bottom: 2rem;
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
     }
     button {
       display: block;
@@ -102,6 +102,7 @@ const Hero = styled.div`
   @media (max-width: 800px) {
     .text {
       padding: 0 5%;
+      padding-bottom: 10rem;
       h1 {
         font-size: 2rem;
       }

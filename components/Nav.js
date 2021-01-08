@@ -34,7 +34,7 @@ const Nav = () => {
           </Link>
         </div>
       </StyledNav>
-      <WhiteLine />
+      {/* <WhiteLine /> */}
     </>
   )
 }

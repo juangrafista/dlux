@@ -11,15 +11,16 @@ const RecentCard = ({ post }) => {
         <StyledCard>
           <div className='img-container'>
             <Image
-              src={urlFor(post.mainImage).width(400).format('webp').url()}
+              src={urlFor(post.mainImage).width(600).format('webp').url()}
               alt={post.title}
               layout='fill'
               objectFit='cover'
             />
           </div>
           <div className='text'>
+            <p>{post.releaseDate}</p>
             <h3>{post.title}</h3>
-            <p>{post.excerpt}</p>
+            <p className='excerpt'>{post.excerpt}</p>
           </div>
         </StyledCard>
       </a>
@@ -28,51 +29,46 @@ const RecentCard = ({ post }) => {
 }
 
 const StyledCard = styled.div`
-  /* background: white; */
-  border-radius: 10px;
   overflow: hidden;
   color: black;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.02);
-  }
+  position: relative;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
   .text {
-    padding: 1.2rem;
-    padding-top: 0;
-    margin-top: 0;
-    background-color: white;
+    padding: 3rem;
+    padding-top: 2rem;
     height: 6rem;
-    h3 {
-      padding-bottom: 0.2rem;
-      padding-top: 1rem;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    opacity: 0.8;
     p {
-      text-transform: none;
-      padding-bottom: 1rem;
+      font-size: 0.8rem;
+    }
+    .excerpt {
+      opacity: 0;
+      padding-top: 0.5rem;
+      font-size: 1rem;
+      transition: opacity 1s ease;
     }
   }
   .img-container {
     overflow: hidden;
     width: 100%;
-    height: 15rem;
+    height: 300px;
     object-fit: cover;
     position: relative;
   }
-  @media (max-width: 800px) {
+  &:hover {
+    opacity: 1;
     .text {
-      padding: 0.5rem;
-      h3 {
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-      }
-      p {
-        padding-bottom: 0.5rem;
-      }
+      opacity: 1;
     }
-    img {
-      height: 8rem;
+    .excerpt {
+      opacity: 1;
     }
   }
 `

@@ -54,7 +54,7 @@ const Hero = styled.div`
     opacity: 0.8;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   button {
     display: block;
