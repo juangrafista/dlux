@@ -50,7 +50,7 @@ const StyledNav = styled.nav`
   min-height: 10vh;
   align-items: center;
   justify-content: space-between;
-  margin: 0 10%;
+  padding: 0rem 10%;
   .logo {
     flex: 1 1 20rem;
     img {

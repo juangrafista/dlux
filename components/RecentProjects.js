@@ -49,30 +49,31 @@ const StyledRecent = styled.div`
   }
   .more-projects {
     display: inline-block;
-    text-align: left;
-    cursor: pointer;
     opacity: 0.7;
     transition: all 0.3s ease;
-    padding: 3rem;
-    padding-left: 10%;
+    margin: 3rem;
+    margin-left: 10%;
 
     span {
       border-bottom: 1px solid rgba(255, 255, 255, 0);
       transition: all 1s ease;
-    }
-    &:hover {
-      opacity: 1;
-      span {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
         border-bottom: 1px solid rgba(255, 255, 255, 1);
       }
     }
   }
   .cards {
+    width: 90%;
+    margin: auto;
     display: grid;
     align-items: center;
     justify-content: space-between;
     min-height: 50%;
     grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    /* gap: 1rem; */
     cursor: pointer;
     a {
       padding: 0;
@@ -82,6 +83,8 @@ const StyledRecent = styled.div`
   @media (max-width: 480px) {
     .cards {
       grid-template-columns: repeat(1, minmax(15rem, 1fr));
+      gap: 0rem;
+      width: 100%;
     }
   }
 `
