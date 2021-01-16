@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import FilteringMenu from '../components/FilteringMenu'
 // components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
 // sanity
-import { getCategories, getPostsByCategory } from '../lib/api'
+import { getCategories, getPostsByCategory, getAllPosts } from '../lib/api'
 // SWR
 import { useGetPostsByCategory } from '../actions'
 
 import styled from 'styled-components'
 
 export default function Projects({ posts: initialData, categories }) {
-  const [category, setCategory] = useState('Eventos')
+  const [category, setCategory] = useState('Teatro')
   const { data: posts, error } = useGetPostsByCategory(
     { category: category },
     initialData
@@ -90,7 +89,7 @@ const CatDescription = styled.div`
 `
 
 export async function getStaticProps() {
-  const posts = await getPostsByCategory()
+  const posts = await getAllPosts()
   const categories = await getCategories()
   return {
     props: {
