@@ -6,10 +6,9 @@ export const useGetPosts = (initialData) => {
   return useSWR(`/api/posts`, fetcher, { initialData })
 }
 
-export const useGetPostsByCategory = ({ category }, initialData) => {
+export const useGetPostsByCategory = ({ category }) => {
   return useSWR(
     `/api/postsByCategory?category=${category || 'Teatro'}`,
-    fetcher,
-    { initialData }
+    fetcher
   )
 }

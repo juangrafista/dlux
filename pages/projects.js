@@ -10,12 +10,9 @@ import { useGetPostsByCategory } from '../actions'
 
 import styled from 'styled-components'
 
-export default function Projects({ posts: initialData, categories }) {
+export default function Projects({ categories }) {
   const [category, setCategory] = useState('Teatro')
-  const { data: posts, error } = useGetPostsByCategory(
-    { category: category },
-    initialData
-  )
+  const { data: posts, error } = useGetPostsByCategory({ category: category })
   if (!posts) {
     return 'Loading!'
   }
@@ -96,6 +93,6 @@ export async function getStaticProps() {
       posts,
       categories,
     },
-    revalidate: 360,
+    revalidate: 1,
   }
 }
