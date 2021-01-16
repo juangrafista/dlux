@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const ProjectCard = ({ post }) => {
   return (
-    <Link href={`/proyects/${post.slug}`}>
+    <Link href={`/projects/${post.slug}`}>
       <a>
         <StyledCard>
           <div className='img-container'>

@@ -54,7 +54,7 @@ const StyledNav = styled.nav`
   .logo {
     flex: 1 1 20rem;
     img {
-      height: 5vh;
+      height: 35px;
     }
   }
   .links {
@@ -85,6 +85,9 @@ const StyledNav = styled.nav`
         align-items: center;
       }
     }
+  }
+  @media (max-width: 400px) {
+    margin: 0.5rem 2%;
   }
 `
 const WhiteLine = styled.div`
