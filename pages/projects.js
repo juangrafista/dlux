@@ -17,9 +17,14 @@ const override = css`
   margin: 20vh auto;
 `
 
-export default function Projects({ categories }) {
-  const [category, setCategory] = useState('Teatro')
-  const { data: posts, error } = useGetPostsByCategory({ category: category })
+export default function Projects({ postsByCat: initialData, categories }) {
+  const [category, setCategory] = useState(categories[0].title)
+  let { data: posts, error } = useGetPostsByCategory({
+    category: category,
+  })
+  if (!posts) {
+    posts = initialData
+  }
 
   return (
     <>
@@ -92,11 +97,11 @@ const CatDescription = styled.div`
 `
 
 export async function getStaticProps() {
-  const posts = await getAllPosts()
   const categories = await getCategories()
+  const postsByCat = await getPostsByCategory({ category: categories[0].title })
   return {
     props: {
-      posts,
+      postsByCat,
       categories,
     },
     revalidate: 1,
