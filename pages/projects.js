@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
+import { BarLoader } from 'react-spinners'
+import { css } from '@emotion/react'
 // components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
@@ -10,12 +12,14 @@ import { useGetPostsByCategory } from '../actions'
 
 import styled from 'styled-components'
 
+const override = css`
+  display: block;
+  margin: 20vh auto;
+`
+
 export default function Projects({ categories }) {
   const [category, setCategory] = useState('Teatro')
   const { data: posts, error } = useGetPostsByCategory({ category: category })
-  if (!posts) {
-    return 'Loading!'
-  }
 
   return (
     <>
@@ -52,9 +56,11 @@ export default function Projects({ categories }) {
         </CatDescription>
 
         <Grid>
-          {posts.map((post) => (
-            <ProjectCard key={post.slug} post={post} />
-          ))}
+          {posts ? (
+            posts.map((post) => <ProjectCard key={post.slug} post={post} />)
+          ) : (
+            <BarLoader color='white' height={4} css={override} />
+          )}
         </Grid>
       </Layout>
     </>

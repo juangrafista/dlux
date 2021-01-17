@@ -7,14 +7,8 @@ import Clients from '../components/Clients'
 import Testimonies from '../components/Testimonies'
 // sanity
 import { getRecentPosts } from '../lib/api'
-// SWR
-import { useGetPosts } from '../actions'
 
-export default function Home({ posts: initialData }) {
-  const { data: posts, error } = useGetPosts(initialData)
-  if (!posts) {
-    return 'Loading!'
-  }
+export default function Home({ posts }) {
   return (
     <>
       <Head>

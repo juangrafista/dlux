@@ -53,9 +53,6 @@ const Hero = styled.div`
         rgba(0, 0, 0, 0) 59.15%
       ),
       linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 43.51%);
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;

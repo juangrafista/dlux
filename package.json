@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.4",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.1.0",
     "@sanity/image-url": "^0.140.19",
@@ -19,6 +20,7 @@
     "react-dom": "17.0.1",
     "react-masonry-css": "^1.0.14",
     "react-player": "^2.7.2",
+    "react-spinners": "^0.10.4",
     "react-vimeo": "^2.0.0",
     "react-youtube": "^7.13.0",
     "styled-components": "^5.2.1",
