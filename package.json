@@ -22,7 +22,6 @@
     "react-player": "^2.7.2",
     "react-spinners": "^0.10.4",
     "react-vimeo": "^2.0.0",
-    "react-youtube": "^7.13.0",
     "styled-components": "^5.2.1",
     "swr": "^0.4.0"
   },

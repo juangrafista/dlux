@@ -1,4 +1,3 @@
-import Head from 'next/head'
 // components
 import Layout from '../components/Layout'
 import HeroSection2 from '../components/HeroSection2'
@@ -11,10 +10,6 @@ import { getRecentPosts } from '../lib/api'
 export default function Home({ posts }) {
   return (
     <>
-      <Head>
-        <title>dLux | Especialistas en Projection Mapping</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
       <Layout>
         <HeroSection2 />
         <RecentProjects recentPosts={posts} />

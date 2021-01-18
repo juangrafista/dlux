@@ -19,8 +19,8 @@ const ImageGallery = ({ gallery }) => {
         columnClassName='my-masonry-grid_column'
       >
         {gallery.map((el, i) => (
-          <div className='img-container'>
-            <img src={urlFor(el).width(400).format('webp').url()} key={i} />
+          <div className='img-container' key={i}>
+            <img src={urlFor(el).width(400).format('webp').url()} />
           </div>
         ))}
       </Masonry>

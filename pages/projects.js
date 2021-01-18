@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import Head from 'next/head'
-import { BarLoader } from 'react-spinners'
 import { css } from '@emotion/react'
 // components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
+import { BarLoader } from 'react-spinners'
 // sanity
 import { getCategories, getPostsByCategory, getAllPosts } from '../lib/api'
 // SWR
@@ -28,11 +27,6 @@ export default function Projects({ postsByCat: initialData, categories }) {
 
   return (
     <>
-      <Head>
-        <title>dLux | Especialistas en Projection Mapping</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <Layout>
         <Categories>
           {categories.map((cat) => (
