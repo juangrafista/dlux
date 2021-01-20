@@ -1,11 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
+import ActiveLink from './ActiveLink'
 import styled from 'styled-components'
 import Image from 'next/image'
 
 const Nav = () => {
   return (
     <>
+      <style jsx>{`
+        .nav-link {
+          text-decoration: none;
+        }
+        .active {
+          content: ' (current page)';
+          color: #ff7300;
+          opacity: 1;
+        }
+      `}</style>
       <ColorLine />
       <StyledNav>
         <div className='logo'>
@@ -22,17 +33,23 @@ const Nav = () => {
             </a>
           </Link>
         </div>
-        <div className='links'>
-          <Link href='/projects'>
-            <a>Proyectos</a>
-          </Link>
-          <Link href='/'>
-            <a>About Us</a>
-          </Link>
-          <Link href='/'>
-            <a>Contacto</a>
-          </Link>
-        </div>
+        <ul className='links'>
+          <li>
+            <ActiveLink href='/projects' activeClassName='active'>
+              <a className='nav-link'>Proyectos</a>
+            </ActiveLink>
+          </li>
+          <li>
+            <Link href='/'>
+              <a>About Us</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/'>
+              <a>Contacto</a>
+            </Link>
+          </li>
+        </ul>
       </StyledNav>
       {/* <WhiteLine /> */}
     </>
@@ -47,6 +64,7 @@ const ColorLine = styled.nav`
 const StyledNav = styled.nav`
   display: flex;
   flex-wrap: wrap;
+
   min-height: 10vh;
   align-items: center;
   justify-content: space-between;
@@ -62,8 +80,11 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    list-style: none;
     a {
       opacity: 50%;
+      text-transform: uppercase;
+
       &:hover {
         opacity: 100%;
         color: #ff7300;

@@ -11,7 +11,7 @@ const HeroSection2 = () => {
           alt='bg-image'
           layout='fill'
           objectFit='cover'
-          priority='true'
+          priority
           quality={50}
         />
         <div className='text'>
