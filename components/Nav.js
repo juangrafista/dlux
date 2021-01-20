@@ -98,17 +98,21 @@ const StyledNav = styled.nav`
     justify-content: center;
     align-items: center;
     margin: 0.5rem 5%;
+
     .logo {
       display: flex;
       justify-content: center;
+      padding-bottom: 0.5rem;
       img {
         justify-content: center;
         align-items: center;
       }
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     margin: 0.5rem 2%;
+    padding: 0rem 2%;
+    font-size: 0.8rem;
   }
 `
 const WhiteLine = styled.div`

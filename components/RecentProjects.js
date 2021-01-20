@@ -10,8 +10,8 @@ const RecentProjects = ({ recentPosts }) => {
         Proyectos <span>Recientes</span>
       </h2>
       <div className='cards'>
-        {recentPosts.map((post) => (
-          <RecentCard post={post} />
+        {recentPosts.map((post, index) => (
+          <RecentCard post={post} key={index} />
         ))}
       </div>
       <Link href='/projects'>
