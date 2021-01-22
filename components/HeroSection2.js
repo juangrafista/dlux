@@ -11,6 +11,8 @@ const HeroSection2 = () => {
           alt='bg-image'
           layout='fill'
           objectFit='cover'
+          objectPosition='bottom center'
+          loading='eager'
           priority
           quality={50}
         />
@@ -37,6 +39,7 @@ const Hero = styled.div`
   min-height: 90vh;
 
   .image-container {
+    width: 100%;
     height: 90vh;
     overflow: hidden;
     position: relative;
