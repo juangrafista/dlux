@@ -25,6 +25,10 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <html lang='es' />
+        <meta
+          name='description'
+          content='Especialistas en projection mapping para teatro y espectáculos.'
+        />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           rel='preload'
