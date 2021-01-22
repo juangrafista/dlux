@@ -24,6 +24,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <html lang='es' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           rel='preload'
