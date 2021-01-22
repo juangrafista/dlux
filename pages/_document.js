@@ -27,16 +27,15 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
-
   render() {
     return (
-      <Html>
+      <Html lang='es'>
         <Head>
-          <html lang='es' />
           <meta
             name='description'
             content='Especialistas en projection mapping para teatro y espectáculos.'
           />
+
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
             rel='preload'
