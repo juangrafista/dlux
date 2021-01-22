@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -23,30 +22,7 @@ const GlobalStyle = createGlobalStyle`
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <html lang='es' />
-        <meta
-          name='description'
-          content='Especialistas en projection mapping para teatro y espectáculos.'
-        />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          rel='preload'
-          as='style'
-          href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,700&display=swap'
-        />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,700&display=swap'
-          rel='stylesheet'
-        />
-        {/* Cresta adobe font */}
-        {/* <link
-          rel='stylesheet'
-          href='https://use.typekit.net/mhz3oqv.css'
-        ></link> */}
-      </Head>
       <GlobalStyle />
-
       <Component {...pageProps} />
     </>
   )
