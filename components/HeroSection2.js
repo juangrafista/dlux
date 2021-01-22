@@ -11,7 +11,6 @@ const HeroSection2 = () => {
           alt='bg-image'
           layout='fill'
           objectFit='cover'
-          objectPosition='bottom center'
           loading='eager'
           priority
           quality={50}
