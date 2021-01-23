@@ -53,7 +53,6 @@ export default function Projects({ postsByCat: initialData, categories }) {
             </div>
           ))}
         </CatDescription>
-
         <Grid>
           {posts ? (
             posts.map((post) => <ProjectCard key={post.slug} post={post} />)

@@ -6,7 +6,7 @@ const HeroSection2 = () => {
   return (
     <Hero>
       <div className='image-container'>
-        <Image
+        {/* <Image
           src='/img/maricel_01.jpg'
           alt='bg-image'
           layout='fill'
@@ -14,7 +14,10 @@ const HeroSection2 = () => {
           loading='eager'
           priority
           quality={50}
-        />
+        /> */}
+        <video autoplay='autoplay' muted loop id='myVideo'>
+          <source src='videos/trimmed-up.mp4' type='video/mp4' />
+        </video>
         <div className='text'>
           <h1>
             CREAMOS <br />
@@ -43,6 +46,13 @@ const Hero = styled.div`
     overflow: hidden;
     position: relative;
     /* z-index: -1; */
+  }
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
   }
   .text {
     position: absolute;
