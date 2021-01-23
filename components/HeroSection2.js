@@ -42,7 +42,7 @@ const Hero = styled.div`
 
   .image-container {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     overflow: hidden;
     position: relative;
     /* z-index: -1; */
