@@ -38,10 +38,9 @@ const HeroSection2 = () => {
 }
 
 const Hero = styled.div`
-  min-height: 90vh;
-
   .image-container {
     width: 100%;
+    height: 100%;
     min-height: 90vh;
     overflow: hidden;
     position: relative;
@@ -58,6 +57,7 @@ const Hero = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
+
     padding: 4rem 10%;
     background: linear-gradient(
         117.07deg,
@@ -111,7 +111,7 @@ const Hero = styled.div`
   }
   @media (max-width: 800px) {
     .text {
-      padding: 0 5%;
+      /* padding: 0 5%; */
       padding-bottom: 10rem;
       h1 {
         font-size: 2rem;
@@ -122,6 +122,14 @@ const Hero = styled.div`
       button {
         font-size: 1.2rem;
       }
+    }
+  }
+  @media (max-height: 600px) {
+    .image-container {
+      min-height: 400px;
+    }
+    .text {
+      padding-bottom: 4rem;
     }
   }
 `
