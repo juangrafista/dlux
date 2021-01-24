@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>dLux | Especialistas en Projection Mapping</title>
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <GlobalStyle />
       <Component {...pageProps} />
     </>
