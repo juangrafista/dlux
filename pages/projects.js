@@ -87,14 +87,14 @@ const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  padding: 1rem 0.5rem;
   h2 {
-    padding: 1rem 0.5rem;
+    padding: 0 0.5rem;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 1rem;
     opacity: 0.5;
-    font-weight: lighter;
+    font-weight: bold;
     &:hover {
       opacity: 1;
     }

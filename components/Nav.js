@@ -40,14 +40,14 @@ const Nav = () => {
             </ActiveLink>
           </li>
           <li>
-            <Link href='/'>
-              <a>About Us</a>
-            </Link>
+            <ActiveLink href='/about' activeClassName='active'>
+              <a className='nav-link'>About Us</a>
+            </ActiveLink>
           </li>
           <li>
-            <Link href='/'>
-              <a>Contacto</a>
-            </Link>
+            <ActiveLink href='/contact' activeClassName='active'>
+              <a className='nav-link'>contacto</a>
+            </ActiveLink>
           </li>
         </ul>
       </StyledNav>
