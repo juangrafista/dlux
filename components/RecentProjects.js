@@ -24,17 +24,6 @@ const RecentProjects = ({ recentPosts }) => {
 }
 
 const StyledRecent = styled.div`
-  /* min-height: 90vh; */
-  background: url('/img/lines.svg'),
-    linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.9)
-    ),
-    linear-gradient(283.61deg, #ff7b00 -1.26%, #cc00ff 100%);
-  /* color: #cc00ff; */
   background: #050505;
   color: white;
   background-size: cover;
