@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { urlFor } from '../lib/sanity'
 import Link from 'next/link'
 import Image from 'next/image'
+import Date from './Date'
 
 const RecentCard = ({ post }) => {
   return (
@@ -18,7 +19,7 @@ const RecentCard = ({ post }) => {
             />
           </div>
           <div className='text'>
-            <p>{post.releaseDate}</p>
+            {post.releaseDate && <Date dateString={post.releaseDate} />}
             <h3>{post.title}</h3>
             <p className='excerpt'>{post.excerpt}</p>
           </div>
@@ -38,14 +39,14 @@ const StyledCard = styled.div`
   transition: opacity 0.3s ease;
   .text {
     padding: 3rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     height: 6rem;
     position: absolute;
     top: 0;
     left: 0;
     color: white;
     opacity: 0.8;
-    p {
+    time {
       font-size: 0.8rem;
     }
     .excerpt {

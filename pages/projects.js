@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 // components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
+import RecentCard from '../components/RecentCard'
 import { BarLoader } from 'react-spinners'
 // sanity
 import { getCategories, getPostsByCategory, getAllPosts } from '../lib/api'
@@ -56,7 +57,7 @@ export default function Projects({ postsByCat: initialData, categories }) {
           </CatDescription>
           <Grid>
             {posts ? (
-              posts.map((post) => <ProjectCard key={post.slug} post={post} />)
+              posts.map((post) => <RecentCard key={post.slug} post={post} />)
             ) : (
               <BarLoader color='white' height={4} css={override} />
             )}
@@ -72,11 +73,11 @@ const ProjectsContainer = styled.div`
 `
 
 const Grid = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(1, minmax(20rem, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  /* grid-gap: 2rem; */
   align-items: center;
   justify-content: center;
   @media (max-width: 800px) {

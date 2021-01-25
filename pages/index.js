@@ -1,6 +1,6 @@
 // components
 import Layout from '../components/Layout'
-import HeroSection2 from '../components/HeroSection2'
+import HeroSection from '../components/HeroSection'
 import RecentProjects from '../components/RecentProjects'
 import Clients from '../components/Clients'
 import Testimonies from '../components/Testimonies'
@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Layout>
-        <HeroSection2 />
+        <HeroSection />
         <RecentProjects recentPosts={posts} />
         <Clients />
         <Testimonies />
