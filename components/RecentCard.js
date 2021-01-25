@@ -7,7 +7,7 @@ import Date from './Date'
 
 const RecentCard = ({ post }) => {
   return (
-    <Link href={`/proyects/${post.slug}`}>
+    <Link href={`/projects/${post.slug}`}>
       <a>
         <StyledCard>
           <div className='img-container'>
