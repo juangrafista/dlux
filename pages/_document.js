@@ -46,20 +46,6 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,700&display=swap'
             rel='stylesheet'
           />
-          {/* <link
-            rel='preload'
-            as='style'
-            href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'
-            rel='stylesheet'
-          /> */}
-          {/* Cresta adobe font */}
-          {/* <link
-          rel='stylesheet'
-          href='https://use.typekit.net/mhz3oqv.css'
-        ></link> */}
         </Head>
         <body>
           <Main />
