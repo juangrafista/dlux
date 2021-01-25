@@ -28,6 +28,7 @@ const Nav = () => {
                 width={138}
                 height={77}
                 quality={50}
+                loading='eager'
                 priority
               />
             </a>
