@@ -1,14 +1,12 @@
 import React from 'react'
-import BlockContent from '@sanity/block-content-to-react'
 import styled from 'styled-components'
-import serializers from '../lib/serializers'
+import { PortableText } from '../lib/sanity'
 
 const PostContent = ({ content }) => {
   return (
     <StyledContent>
-      <BlockContent
+      <PortableText
         imageOptions={{ w: 300, h: 240, fit: 'max' }}
-        serializers={serializers}
         blocks={content}
       />
     </StyledContent>
