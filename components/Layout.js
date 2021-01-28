@@ -1,21 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer'
 
-const Layout = ({ preview, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      {preview ? (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          This is a preview.{' '}
-          <a href='/api/exit-preview' style={{ color: 'red' }}>
-            Click here
-          </a>{' '}
-          to exit preview mode.
-        </div>
-      ) : (
-        <></>
-      )}
       <Nav />
       <main>{children}</main>
       <Footer />

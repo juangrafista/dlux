@@ -1,20 +1,14 @@
 import Layout from '../../components/Layout'
-import { getPostBySlug, getAllPosts, getPostBySlugPreview } from '../../lib/api'
+import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostContent from '../../components/PostContent'
 import MainVideo from '../../components/MainVideo'
 import Creditos from '../../components/Creditos'
 import ImageGallery from '../../components/ImageGallery'
 import styled from 'styled-components'
-import ErrorPage from 'next/error'
-import { useRouter } from 'next/router'
 
-const PostDetail = ({ post, preview }) => {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
+const PostDetail = ({ post }) => {
   return (
-    <Layout preview={preview}>
+    <Layout>
       {post.mainVideo && <MainVideo video={post.mainVideo} />}
       <Title>{post.title}</Title>
       {post.body && <PostContent content={post.body} />}
@@ -32,23 +26,23 @@ const Title = styled.h1`
   text-transform: uppercase;
 `
 
-export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostBySlugPreview(params.slug, preview)
+export async function getStaticProps({ params }) {
+  const post = await getPostBySlug(params.slug)
   return {
-    props: {
-      preview,
-      post: data?.post || null,
-    },
+    props: { post },
   }
 }
 
 export async function getStaticPaths() {
   const posts = await getAllPosts()
-  const paths = posts?.map((post) => ({ params: { slug: post.slug } })) || []
-
+  const paths = posts?.map((post) => {
+    return {
+      params: { slug: post.slug },
+    }
+  })
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
