@@ -15,7 +15,7 @@ const HeroSection = () => {
           priority
           quality={50}
         /> */}
-        <video autoplay='autoplay' muted loop playsInline id='myVideo'>
+        <video autoPlay='autoplay' muted loop playsInline id='myVideo'>
           <source src='videos/trimmed-up.mp4' type='video/mp4' />
         </video>
         <div className='text'>
