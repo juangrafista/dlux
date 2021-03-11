@@ -5,8 +5,17 @@ import MainVideo from '../../components/MainVideo'
 import Creditos from '../../components/Creditos'
 import ImageGallery from '../../components/ImageGallery'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const PostDetail = ({ post }) => {
+  const router = useRouter()
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   return (
     <Layout>
       {post.mainVideo && <MainVideo video={post.mainVideo} />}
@@ -43,7 +52,7 @@ export async function getStaticPaths() {
   })
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
