@@ -103,11 +103,20 @@ const Categories = styled.div`
 `
 const CatDescription = styled.div`
   text-align: center;
+  margin: 0 auto;
   padding: 1rem 0;
   padding-bottom: 3rem;
+  max-width: 60%;
   p {
     font-size: 1.2rem;
     font-weight: lighter;
+    line-height: 1.8rem;
+  }
+  @media (max-width: 800px) {
+    max-width: 95%;
+    p {
+      font-size: 1rem;
+    }
   }
 `
 
