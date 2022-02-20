@@ -122,6 +122,7 @@ const CatDescription = styled.div`
 
 export async function getStaticProps() {
   const categories = await getCategories()
+
   const postsByCat = await getPostsByCategory({ category: categories[0].title })
   return {
     props: {

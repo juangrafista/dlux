@@ -25,8 +25,8 @@ const Nav = () => {
               <Image
                 src='/dlux-logo.jpg'
                 alt='dlux-logo'
-                width={138}
-                height={77}
+                width={69}
+                height={35}
                 quality={50}
                 loading='eager'
                 priority
@@ -72,9 +72,6 @@ const StyledNav = styled.nav`
   padding: 0rem 10%;
   .logo {
     flex: 1 1 20rem;
-    img {
-      height: 35px;
-    }
   }
   .links {
     flex: 1 1 20rem;

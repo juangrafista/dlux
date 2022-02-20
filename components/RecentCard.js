@@ -16,6 +16,7 @@ const RecentCard = ({ post }) => {
               alt={post.title}
               layout='fill'
               objectFit='cover'
+              sizes='(max-width: 600px) 100vw, (max-width: 1023px) 48vw, 23vw'
             />
           </div>
           <div className='text'>

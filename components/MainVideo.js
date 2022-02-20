@@ -14,7 +14,7 @@ const MainVideo = ({ video }) => {
           muted={true}
           playing={true}
           loop={true}
-          controls={true}
+          controls={false}
         />
       </div>
     </StyledVideo>

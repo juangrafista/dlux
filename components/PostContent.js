@@ -20,7 +20,7 @@ const StyledContent = styled.div`
   text-align: center;
   p {
     padding-bottom: 1.4rem;
-    width: 80%;
+    max-width: 600px;
     margin: 0 auto;
     line-height: 2;
   }
