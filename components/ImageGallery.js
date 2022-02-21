@@ -85,9 +85,17 @@ const StyledGallery = styled.div`
   }
   .img-container {
     width: 100%;
+    /* background-color: black; */
+    opacity: 90%;
     img {
       width: 100%;
       object-fit: cover;
+      cursor: pointer;
+      scale: (0.5);
+    }
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 100%;
     }
   }
 `

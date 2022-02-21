@@ -15,7 +15,13 @@ const MainVideo = ({ video }) => {
           playing={true}
           loop={true}
           controls={false}
+          config={{
+            youtube: {
+              playerVars: { modestbranding: 1 },
+            },
+          }}
         />
+        <div className='gradient'></div>
       </div>
     </StyledVideo>
   )
@@ -25,6 +31,17 @@ const StyledVideo = styled.div`
   .player-wrapper {
     position: relative;
     padding-top: 45%;
+    pointer-events: none;
+
+    .gradient {
+      position: absolute;
+      width: 100%;
+      height: 101%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 20%),
+        linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 20%);
+    }
 
     @media (max-width: 800px) {
       padding-top: 60%;
@@ -32,7 +49,7 @@ const StyledVideo = styled.div`
   }
   .react-player {
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
   }
 `
